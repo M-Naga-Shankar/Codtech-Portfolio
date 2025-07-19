@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Naga Shankar - Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">Portfolio</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" class="btn">Download CV</a></li>
+        </ul>
+        
+      </nav>
+      <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</div>
+    </div>
+  </header>
+  <script>
+    const form = document.querySelector("form");
+    const alertBox = document.createElement("div");
+    alertBox.className = "alert";
+    alertBox.innerText = "Your message has been sent!";
+    document.body.appendChild(alertBox);
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alertBox.classList.add("show");
+
+      setTimeout(() => alertBox.classList.remove("show"), 3000);
+      form.reset();
+    });
+  </script>
+  
+
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Hello, I’m <span>M Naga Shankar</span></h1>
+        <p>B.Tech IT Student passionate about Full Stack Web Development.</p>
+        <a href="#projects" class="btn">Browse Projects</a>
+      </div>
+      <div class="hero-image">
+        <img src="image.png"
+          alt="Shankar">
+      </div>
+    </div>
+  </section>
+<!-- ... previous header and hero sections ... -->
+
+<section class="about" id="about">
+    <div class="container about-content">
+      <div class="about-image">
+        <img src="image.png" alt="Gayathri">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+           I am Naga Shankar, As a third-year B.Tech student in Computer Science and Engineering with a robust foundation in full stack
+development, I am seeking an opportunity to leverage my technical skills and hands-on experience gained
+through internships and contributions to real-world projects. I am eager to bring my passion for
+innovative solutions and collaborative teamwork to a dynamic organization, where I can continue to grow
+professionally while contributing effectively to impactful projects.
+            </p>
+        <p>
+          I'm currently open to internships and collaborative opportunities where I can grow and contribute to real-world applications.
+        </p>
+        <a href="#contact" class="btn">Let's Work Together</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-description">Here are some of the key skills I bring to the table:</p>
+  
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming languages</h3>
+          <ul>
+            <li>Java </li>
+            <li>python</li>
+            <li>C</li>
+            <li>R</li>
+            <li>Php</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Technologies & Tools</h3>
+          <ul>
+            <li>Html</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Mysql , MongoDB & Postgresql</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Reactjs</li>
+              <li>Nodejs</li>
+              <li>Flask</li>
+              <li>Django</li>
+              <li>Nextjs</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Real-Time Quiz App Using JavaScript & Bootstrap</h3>
+          <p>A responsive, interactive quiz application built with HTML, CSS, JavaScript, and Bootstrap. It allows users to answer multiple-choice questions with instant feedback, real-time score tracking, and a clean, modern UI. Perfect for learning or testing general knowledge.</p>
+        </div>
+        <div class="card">
+          <h3>Real-Time Chat App Using WebSockets & React</h3>
+          <p>A real-time chat application built using React.js and WebSockets (Socket.IO) for seamless bi-directional communication. Users can send and receive messages instantly in a modern, responsive UI. Ideal for learning how real-time communication works in web applications.</p>
+        </div>
+          <div class="card">
+          <h3>E-Learning Platform Frontend UI with HTML, CSS & JavaScript</h3>
+          <p>A clean and responsive front-end design for an e-learning platform built using HTML, CSS, Bootstrap, and JavaScript. The interface includes key features like course listing with filters, user progress tracking UI, and embedded video lessons. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Have Any Project In Your Mind?</h2>
+      <form onsubmit="handleSubmit(event)">
+        <div id="formAlert" class="alert alert-success d-none mt-3" role="alert">
+          Your message has been sent successfully!
+        </div>
+        
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      
+    </div>
+  </section>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const alertBox = document.getElementById('formAlert');
+      alertBox.classList.remove('d-none');
+      alertBox.classList.add('show');
+  
+      // Clear form fields (optional)
+      event.target.reset();
+  
+      // Hide alert after 3 seconds
+      setTimeout(() => {
+        alertBox.classList.add('d-none');
+      }, 3000);
+    }
+  </script>
+  
+
+  <footer class="footer">
+    <p>© 2025 Gayathri Lalitha | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
