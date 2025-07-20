@@ -1,4 +1,11 @@
 # Codtech-Portfolio
+*COMPANY*    : CODTECH IT SOLUTIONS <BR>
+*NAME*       : M NAGA SHANKAR<br>
+*INTERN ID*  : CT08DN1962<br>
+*DOMAIN*     : FRONT END DEVELOPMENT<br>
+*DURATION*  : 8 WEEKS<br>
+*MENTOR*     : NEELA SANTOSH<br>
+
 A modern and responsive **portfolio website** built with **HTML5** and **CSS3** to showcase a developer's skills, projects, and contact information. Designed for performance, simplicity, and professional presentation.
 
 ---
